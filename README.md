@@ -1,0 +1,2 @@
+# nautible-app-examples-manifest project
+最低限の動作を確認するアプリケーションのマニフェストを管理するプロジェクト
