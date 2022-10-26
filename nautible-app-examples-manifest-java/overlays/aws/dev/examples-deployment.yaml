@@ -8,7 +8,7 @@ spec:
     spec:
       containers:
       - name: nautible-app-examples-java
-        image: public.ecr.aws/nautible/nautible-app-examples-java:52bc1fdedd223b01cd77ed0af7d3f350378fca7d
+        image: public.ecr.aws/nautible/nautible-app-examples-java:33103131e7618396c031497aaa3a78a02f945687
         env:
         - name: QUARKUS_PROFILE
           value: aws-dev
