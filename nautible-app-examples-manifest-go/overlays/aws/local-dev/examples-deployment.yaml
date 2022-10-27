@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nautible-app-examples-go
+  namespace: nautible-app-examples
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+      - name: nautible-app-examples-go
+        imagePullPolicy: Never
+        env:
+        - name: LOG_LEVEL # DEBUG, INFO, WARN, ERROR, DPANIC, PANIC, FATAL
+          value: DEBUG
+        - name: LOG_FORMAT # json, console
+          value: console
