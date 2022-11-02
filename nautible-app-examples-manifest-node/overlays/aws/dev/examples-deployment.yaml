@@ -8,7 +8,7 @@ spec:
     spec:
       containers:
       - name: nautible-app-examples-node
-        image: public.ecr.aws/nautible/nautible-app-examples-node:XXXX
+        image: public.ecr.aws/nautible/nautible-app-examples-node:33646893714958ef012e81ebb1eeff2a493a7a55
         env:
         - name: LOG_LEVEL # error, warn, info, verbose, debug
           value: info
