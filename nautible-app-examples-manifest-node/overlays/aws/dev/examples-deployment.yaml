@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nautible-app-examples-node
+  namespace: nautible-app-examples
+spec:
+  template:
+    spec:
+      containers:
+      - name: nautible-app-examples-node
+        image: public.ecr.aws/nautible/nautible-app-examples-node:XXXX
+        env:
+        - name: LOG_LEVEL # error, warn, info, verbose, debug
+          value: info
