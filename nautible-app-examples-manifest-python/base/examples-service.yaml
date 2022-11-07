@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nautible-app-examples-python
+  namespace: nautible-app-examples
+  labels:
+    app.kubernetes.io/name: nautible-app-examples-python
+    app.kubernetes.io/instance: nautible-app-examples-python
+    app.kubernetes.io/version: 1.0.0
+    app.kubernetes.io/component: app
+    app.kubernetes.io/part-of: nautible
+    app.kubernetes.io/managed-by: manual
+spec:
+  selector:
+    app.kubernetes.io/instance: nautible-app-examples-python
+    app.kubernetes.io/component: app
+  ports:
+  - name: http-nautible-app-examples-port
+    port: 8080
+    targetPort: 8080
