@@ -8,7 +8,7 @@ spec:
     spec:
       containers:
       - name: nautible-app-examples-go
-        image: public.ecr.aws/nautible/nautible-app-examples-go:730775b10ffc95b371f1bb4082c89cbe6ab313b8
+        image: public.ecr.aws/nautible/nautible-app-examples-go:9fb65f1d31225f15c954ac15330e42bad81e82b0
         env:
         - name: LOG_LEVEL # DEBUG, INFO, WARN, ERROR, DPANIC, PANIC, FATAL
           value: INFO
