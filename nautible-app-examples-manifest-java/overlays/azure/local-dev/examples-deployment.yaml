@@ -4,11 +4,13 @@ metadata:
   name: nautible-app-examples-java
   namespace: nautible-app-examples
 spec:
+  replicas: 1
   template:
     spec:
       containers:
       - name: nautible-app-examples-java
-        image: public.ecr.aws/nautible/nautible-app-examples-java:92dd3cc9c73f943f32c045f1db6c6024ab3852ce
+        image: nautibledevacr.azurecr.io/nautible-app-examples-java:latest
+        imagePullPolicy: Never
         env:
         - name: QUARKUS_PROFILE
-          value: aws-dev
+          value: azure-local-dev

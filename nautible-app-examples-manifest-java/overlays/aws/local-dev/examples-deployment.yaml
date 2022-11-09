@@ -10,3 +10,6 @@ spec:
       containers:
       - name: nautible-app-examples-java
         imagePullPolicy: Never
+        env:
+        - name: QUARKUS_PROFILE
+          value: aws-local-dev

@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nautible-app-examples-go
+  namespace: nautible-app-examples
+spec:
+  template:
+    spec:
+      containers:
+      - name: nautible-app-examples-go
+        image: nautibledevacr.azurecr.io/nautible-app-examples-go:XXXX
+        env:
+        - name: LOG_LEVEL # DEBUG, INFO, WARN, ERROR, DPANIC, PANIC, FATAL
+          value: INFO
+        - name: LOG_FORMAT # json, console
+          value: json

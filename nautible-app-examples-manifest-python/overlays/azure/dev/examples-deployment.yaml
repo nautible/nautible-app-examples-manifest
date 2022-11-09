@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nautible-app-examples-python
+  namespace: nautible-app-examples
+spec:
+  template:
+    spec:
+      containers:
+      - name: nautible-app-examples-python
+        image: nautibledevacr.azurecr.io/nautible-app-examples-python:XXXX
+        env:
+        - name: LOG_LEVEL # CRITICAL, ERROR, WARNING, INFO, DEBUG
+          value: INFO
+        - name: LOG_FORMAT # json, console
+          value: json
