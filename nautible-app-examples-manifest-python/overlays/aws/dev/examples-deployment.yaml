@@ -8,7 +8,7 @@ spec:
     spec:
       containers:
       - name: nautible-app-examples-python
-        image: public.ecr.aws/nautible/nautible-app-examples-python:92dd3cc9c73f943f32c045f1db6c6024ab3852ce
+        image: public.ecr.aws/nautible/nautible-app-examples-python:560bc7f9a1a26cca56f45fcb93d1d2f14641155f
         env:
         - name: LOG_LEVEL # CRITICAL, ERROR, WARNING, INFO, DEBUG
           value: INFO
