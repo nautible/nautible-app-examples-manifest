@@ -8,7 +8,7 @@ spec:
     spec:
       containers:
       - name: nautible-app-examples-python
-        image: nautibledevacr.azurecr.io/nautible-app-examples-python:8746b221ae8bf943cd51be5a5b7e6497d23a9f9e
+        image: nautibledevacr.azurecr.io/nautible-app-examples-python:ee6cce6463b1b34971a334e74306931830bbc170
         env:
         - name: LOG_LEVEL # CRITICAL, ERROR, WARNING, INFO, DEBUG
           value: INFO
