@@ -4,11 +4,13 @@ metadata:
   name: nautible-app-examples-node
   namespace: nautible-app-examples
 spec:
+  replicas: 1
   template:
     spec:
       containers:
       - name: nautible-app-examples-node
-        image: public.ecr.aws/nautible/nautible-app-examples-node:ee6cce6463b1b34971a334e74306931830bbc170
+        image: nautibledevacr.azurecr.io/nautible-app-examples-node:latest
+        imagePullPolicy: Never
         env:
         - name: LOG_LEVEL # error, warn, info, verbose, debug
-          value: info
+          value: debug
