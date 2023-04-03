@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nautible-app-examples-python
+  namespace: nautible-app-examples
+spec:
+  template:
+    spec:
+      containers:
+      - name: nautible-app-examples-python
+        image: public.ecr.aws/nautible/nautible-app-examples-python:ee6cce6463b1b34971a334e74306931830bbc170
+        env:
+        - name: LOG_LEVEL # CRITICAL, ERROR, WARNING, INFO, DEBUG
+          value: INFO
+        - name: LOG_FORMAT # json, console
+          value: json

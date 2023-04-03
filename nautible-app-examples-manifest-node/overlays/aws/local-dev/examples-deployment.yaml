@@ -1,15 +1,15 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nautible-app-examples-java
+  name: nautible-app-examples-node
   namespace: nautible-app-examples
 spec:
   replicas: 1
   template:
     spec:
       containers:
-      - name: nautible-app-examples-java
+      - name: nautible-app-examples-node
         imagePullPolicy: Never
         env:
-        - name: QUARKUS_PROFILE
-          value: aws-local-dev
+        - name: LOG_LEVEL # error, warn, info, verbose, debug
+          value: debug
