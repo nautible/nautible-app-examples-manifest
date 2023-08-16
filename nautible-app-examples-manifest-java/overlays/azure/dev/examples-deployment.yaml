@@ -8,7 +8,7 @@ spec:
     spec:
       containers:
       - name: nautible-app-examples-java
-        image: nautibledevacr.azurecr.io/nautible-app-examples-java:4da9bf154458cd83eb0e91b0936731204fd026d3
+        image: nautibledevacr.azurecr.io/nautible-app-examples-java:8c8ebb30be2909a9676f3c8474af111704ddd90c
         env:
         - name: QUARKUS_PROFILE
           value: azure-dev

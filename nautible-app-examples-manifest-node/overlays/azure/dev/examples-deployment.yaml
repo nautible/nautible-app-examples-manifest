@@ -8,7 +8,7 @@ spec:
     spec:
       containers:
       - name: nautible-app-examples-node
-        image: nautibledevacr.azurecr.io/nautible-app-examples-node:4da9bf154458cd83eb0e91b0936731204fd026d3
+        image: nautibledevacr.azurecr.io/nautible-app-examples-node:8c8ebb30be2909a9676f3c8474af111704ddd90c
         env:
         - name: LOG_LEVEL # error, warn, info, verbose, debug
           value: info
