@@ -27,43 +27,43 @@ spec:
         app.kubernetes.io/managed-by: manual
     spec:
       containers:
-      - name: nautible-app-examples-java
-        image: public.ecr.aws/nautible/nautible-app-examples-java:dummy
-        imagePullPolicy: Always
-        securityContext:
-          allowPrivilegeEscalation: false
-          runAsNonRoot: true
-          readOnlyRootFilesystem: true
-          capabilities:
-            drop:
-              - all
-        volumeMounts:
-        - mountPath: /tmp
-          name: tmp-nautible-app-examples-mount
-        resources:
-          requests:
-            memory: "64Mi"
-            cpu: "250m"
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
-        ports:
-        - name: http
-          protocol: TCP
-          containerPort: 8080
-        livenessProbe:
-          httpGet:
-            port: 8080
-            path: /q/health/live
-          failureThreshold: 10
-          periodSeconds: 30
-        readinessProbe:
-          httpGet:
-            port: 8080
-            path: /q/health/ready
-          failureThreshold: 10
-          periodSeconds: 30
+        - name: nautible-app-examples-java
+          image: public.ecr.aws/nautible/nautible-app-examples-java:dummy
+          imagePullPolicy: Always
+          securityContext:
+            allowPrivilegeEscalation: false
+            runAsNonRoot: true
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop:
+                - all
+          volumeMounts:
+            - mountPath: /tmp
+              name: tmp-nautible-app-examples-mount
+          resources:
+            requests:
+              memory: '128Mi'
+              cpu: '250m'
+            limits:
+              memory: '256Mi'
+              cpu: '500m'
+          ports:
+            - name: http
+              protocol: TCP
+              containerPort: 8080
+          livenessProbe:
+            httpGet:
+              port: 8080
+              path: /q/health/live
+            failureThreshold: 10
+            periodSeconds: 30
+          readinessProbe:
+            httpGet:
+              port: 8080
+              path: /q/health/ready
+            failureThreshold: 10
+            periodSeconds: 30
       volumes:
-      - name: tmp-nautible-app-examples-mount
-        hostPath:
-          path: /tmp
+        - name: tmp-nautible-app-examples-mount
+          hostPath:
+            path: /tmp
