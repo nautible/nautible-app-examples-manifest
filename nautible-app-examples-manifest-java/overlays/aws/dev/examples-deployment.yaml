@@ -7,8 +7,8 @@ spec:
   template:
     spec:
       containers:
-      - name: nautible-app-examples-java
-        image: public.ecr.aws/nautible/nautible-app-examples-java:8c8ebb30be2909a9676f3c8474af111704ddd90c
-        env:
-        - name: QUARKUS_PROFILE
-          value: aws-dev
+        - name: nautible-app-examples-java
+          image: public.ecr.aws/nautible/nautible-app-examples-java:688cca610abf2b8372afc18e77dfef9ad3ac8255
+          env:
+            - name: QUARKUS_PROFILE
+              value: aws-dev
